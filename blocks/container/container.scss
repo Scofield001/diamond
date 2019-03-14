@@ -1,0 +1,22 @@
+$img: '2.jpg';
+$focus-img: '3.jpg';
+$back-color: lighten(gray, 40%);
+$back-color-focus: #3761c3;
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include background-image($img);
+  @include background-image-media-all($img);
+  background-color: $back-color;
+  @extend %back-center;
+
+  &:focus-within {
+    @include background-image($focus-img);
+    @include background-image-media-all($focus-img);
+    background-color: $back-color-focus;
+    @extend %back-center;
+  }
+}
+
