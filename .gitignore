@@ -1,0 +1,5 @@
+/node_modules/
+/dist/
+/img/original/
+package-lock.json
+.idea
