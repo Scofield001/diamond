@@ -4,5 +4,10 @@
   - el = block + 'text';
   -cls = block + el
 
-  each val in values
-    input(class= el value=val readonly)
+  ul(class = block+'list')
+    each val in values
+      li(class = block + 'item')
+        span(class = block + 'text') #{val}
+
+
+  input(class= block + 'focus' readonly)
