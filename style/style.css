@@ -410,14 +410,15 @@ body,
 
 .container,
 .container:focus-within,
-.diamond__text {
+.diamond__item {
   background-position: center center;
   -webkit-background-size: cover;
   background-size: cover;
 }
 
 .diamond__focus,
-.diamond__box,
+.diamond__item,
+.diamond__list,
 .diamond__text {
   width: 100%;
   height: 100%;
@@ -471,42 +472,51 @@ body,
   padding: 0;
   cursor: pointer;
   outline: none;
-  z-index: 1;
   position: inherit;
   opacity: 0;
 }
 
-.diamond__text {
-  position: inherit;
-  text-align: center;
-  font-size: 16vw;
-  color: #fff;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+.diamond__item {
+  border: 0;
+  padding: 0;
+  visibility: hidden;
   background-image: url("../img/1.jpg");
   background-color: #e50040;
   -webkit-animation: load 4.5s infinite;
   animation: load 4.5s infinite;
 }
 
-.diamond__text:nth-child(2) {
+.diamond__item:nth-child(2) {
   -webkit-animation-delay: 0.5s;
   animation-delay: 0.5s;
 }
 
-.diamond__text:nth-child(3) {
+.diamond__item:nth-child(3) {
   -webkit-animation-delay: 1s;
   animation-delay: 1s;
 }
 
-.diamond__text:nth-child(4) {
+.diamond__item:nth-child(4) {
   -webkit-animation-delay: 1.5s;
   animation-delay: 1.5s;
 }
 
-.diamond__text:last-child {
+.diamond__item:last-child {
   -webkit-animation-delay: 2s;
   animation-delay: 2s;
+}
+
+.diamond__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.diamond__text {
+  font-size: 16vw;
+  color: #fff;
+  top: -8%;
+  text-align: center;
 }
 
 @media (max-width: 1024px) {
