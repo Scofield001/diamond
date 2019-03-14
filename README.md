@@ -8,12 +8,13 @@
     
 *Production* версия содержится в папке `dist/`, ее Вы можете посмотреть перейдя по этой _[ссылке](https://github.com/Scofield001/scofield001.github.io/tree/master/diamond)_
     
-    lib/
-        animation/ # Обработчики анимаций
-        expansion/ # Наследования SASS
-        mixins/    # Миксины
-    main.scss      # Основные стили
-    normalize.css  # Файл нормализации css
+    lib/        
+        styles/
+            animation/ # Обработчики анимаций
+            expansion/ # Наследования SASS
+            mixins/    # Миксины
+        main.scss      # Основные стили
+        normalize.css  # Файл нормализации css
         
 Использовались технологии: `pug, sass, gulp, БЭМ`.
 
