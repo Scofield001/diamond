@@ -1,0 +1,7 @@
+$hd: 768px;
+$full-hd: 1024px;
+
+@mixin background-image-media-all ($img) {
+  @include background-image-media($hd, $img);
+  @include background-image-media($full-hd, $img);
+}
