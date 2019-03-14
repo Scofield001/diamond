@@ -1,0 +1,8 @@
+.diamond
+  - values = ['Go!', '1', '2', '3', 'Go!'];
+  - block = 'diamond__';
+  - el = block + 'text';
+  -cls = block + el
+
+  each val in values
+    input(class= el value=val readonly)
