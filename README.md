@@ -18,5 +18,5 @@
         
 Использовались технологии: `pug, sass, gulp, БЭМ`.
 
-**[Ссылка на страницу](https://scofield001.github.io/diamond/index.html)**
+**[Ссылка на страницу](https://scofield001.github.io/diamond/)**
 
