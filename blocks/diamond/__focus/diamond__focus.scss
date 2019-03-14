@@ -1,0 +1,12 @@
+.diamond {
+  &__focus {
+    @extend %position;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
+    z-index: 1;
+    position: inherit;
+    opacity: 0;
+  }
+}
