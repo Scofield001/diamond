@@ -1,6 +1,6 @@
 # diamond
 
-#### [Вторая](https://github.com/Scofield001/diamond/tree/hover)(правильная) версия страницы
+#### [Ветка](https://github.com/Scofield001/diamond/tree/hover)второй(правильной) версии страницы
 Скоро перепишу обе страницы в ветку *master*
 
 ---
