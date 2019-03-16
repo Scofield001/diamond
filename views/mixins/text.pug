@@ -1,0 +1,9 @@
+- block = 'diamond__';
+- el = block + 'text'
+- mod = el + '_back-img'
+
+mixin text (cls)
+  - values = ['Go!', '1', '2', '3', 'Go!'];
+
+  each val in values
+    span(class = cls) #{val}
