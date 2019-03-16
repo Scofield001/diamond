@@ -1,0 +1,10 @@
+.bg {
+  @extend %pos-center;
+  z-index: 0;
+  //Растягиваем блок(фон) на всю ширину и высоту
+  transform: translate(-50%, -50%);
+  margin-left: 50%;
+  padding-bottom: 75%;
+  min-width: 100vw;
+  min-height: 100vh;
+}
