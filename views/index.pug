@@ -1,0 +1,17 @@
+include mixins/text
+
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title Hover
+    include head/viewport
+    include head/style
+  body
+    .container
+      .content
+        .dummy
+        .diamond
+          .diamond__box
+            +text (el)
+        .bg
