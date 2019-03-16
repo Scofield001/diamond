@@ -7,24 +7,23 @@ const gulp = require( 'gulp' ),
     tinify = require('gulp-tinify'),
     pug = require('gulp-pug'),
     gcmq = require('gulp-group-css-media-queries'),
+    normalize = require('node-normalize-scss'),
 
     API_KEY_TINIFY = '',
 
-    styles = [
-        'lib/**/*.css',
-        'lib/**/*.scss',
-        'blocks/**/*.scss',
+    style = [
+        'sass/**/*.scss',
     ],
     views = ['views/*.pug'],
-    images = [
+    img = [
         'img/**/*',
         '!img/original/*',
     ];
 
 gulp.task('sass', function () {
-    gulp.src( styles )
+    gulp.src( style )
         .pipe( concat( 'style.scss' ))
-        .pipe( sass())
+        .pipe( sass({includePaths: normalize.includePaths}))
         .pipe(autoprefixer({
             browsers: ['last 11 version'],
             cascade: false,
@@ -48,7 +47,7 @@ gulp.task('pug', function buildHTML() {
 });
 
 gulp.task('tinify', function() {
-    gulp.src(images, {nodir: true})
+    gulp.src(img, {nodir: true})
         .pipe(tinify(API_KEY_TINIFY))
         .pipe(gulp.dest('dist/img/'));
 });
