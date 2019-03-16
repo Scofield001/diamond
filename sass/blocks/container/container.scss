@@ -1,6 +1,6 @@
 $img: '2.jpg';
 $focus-img: '3.jpg';
-$back-color: lighten(gray, 40%);
+$back-color: #fff;
 $back-color-focus: #3761c3;
 
 .container {
@@ -8,9 +8,6 @@ $back-color-focus: #3761c3;
   justify-content: center;
   align-items: center;
   background-color: $back-color;
-  @include background-image($img);
-  @include background-image-media-all($img);
-  @extend %back-center;
 
   &:focus-within {
     background-color: $back-color-focus;
