@@ -1,17 +1,17 @@
+include mixins/text
+
 doctype html
 html(lang='en')
-    head
-      meta(charset='UTF-8')
-      title Focus
-      meta(name='viewport', content='width=device-width, initial-scale=1')
-      meta(name='MobileOptimized', content='320')
-      meta(name='HandheldFriendly', content='true')
-
-      link(rel='stylesheet', type='text/css', href='style/style.min.css')
-    body
-      .container
-        .content
-          .dummy
-          .diamond
-            include ../blocks/diamond/__box/diamond__box
-            include ../blocks/diamond/__focus/diamond__focus
+  head
+    meta(charset='UTF-8')
+    title Focus
+    include head/viewport
+    include head/style
+  body
+    div(class = 'container container_back-img')
+      .content
+        .dummy
+        .diamond
+          .diamond__box
+            +text (el + ' ' + mod)
+          input(class= block + 'focus' readonly)
