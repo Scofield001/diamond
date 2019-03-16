@@ -1,0 +1,10 @@
+$img: '1.jpg';
+
+.diamond {
+  &__text {
+    &_back-img {
+      @include background-image($img);
+      @extend %back-center;
+    }
+  }
+}
