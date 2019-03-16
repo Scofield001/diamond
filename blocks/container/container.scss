@@ -7,15 +7,15 @@ $back-color-focus: #3761c3;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: $back-color;
   @include background-image($img);
   @include background-image-media-all($img);
-  background-color: $back-color;
   @extend %back-center;
 
   &:focus-within {
+    background-color: $back-color-focus;
     @include background-image($focus-img);
     @include background-image-media-all($focus-img);
-    background-color: $back-color-focus;
     @extend %back-center;
   }
 }
