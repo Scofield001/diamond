@@ -17,7 +17,7 @@
         blocks/     # БЭМ
         expansions/ # Наследования SASS
         mixins/     # Миксины
-    main.scss       # Основные стили
+        main.scss   # Основные стили
         
 Использовались технологии: `pug, sass, gulp, БЭМ`.
 
