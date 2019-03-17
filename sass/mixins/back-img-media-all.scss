@@ -1,7 +1,21 @@
-$hd: 768px;
-$full-hd: 1024px;
+$mobile: 320px;
+$mobile-land: 480px;
+$tablet: 768px;
+$tablet-land: 1024px;
 
-@mixin background-image-media-all ($img) {
-  @include background-image-media($hd, $img);
-  @include background-image-media($full-hd, $img);
+
+@mixin back-img-media-all($img) {
+  @media (max-width : $mobile + 1) {
+    @include back-img-media($mobile, $img);
+  }
+  @media (min-width : $mobile) and (max-width: $mobile-land + 1){
+    @include back-img-media($mobile-land, $img);
+  }
+  @media (min-width : $tablet) and (max-width : $tablet-land + 1) {
+    @include back-img-media($tablet-land, $img);
+  }
+  @media (min-width : $tablet-land) {
+    @include back-img($img);
+  }
+  @media only screen and (-webkit-min-device-pixel-ratio : 1.5),only screen and (min-device-pixel-ratio : 1.5) {}
 }
