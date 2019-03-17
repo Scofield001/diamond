@@ -19,7 +19,7 @@
         mixins/     # Миксины
         main.scss   # Основные стили
         
-Использовались технологии: `pug, sass, gulp, БЭМ`.
+Использовались технологии: `pug, sass, gulp, БЭМ`
 
 **[Ссылка на Главную страницу](https://scofield001.github.io/diamond/)**
 
