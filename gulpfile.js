@@ -11,14 +11,9 @@ const gulp = require( 'gulp' ),
 
     API_KEY_TINIFY = '',
 
-    style = [
-        'sass/**/*.scss',
-    ],
+    style = ['sass/**/*.scss'],
     views = ['views/*.pug'],
-    img = [
-        'img/**/*',
-        '!img/original/*',
-    ];
+    img = ['img/**/*'];
 
 gulp.task('sass', function () {
     gulp.src( style )
