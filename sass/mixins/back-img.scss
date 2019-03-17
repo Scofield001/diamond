@@ -1,3 +1,3 @@
-@mixin background-image($img) {
+@mixin back-img($img) {
   background-image: url('../img/' + $img);
 }
