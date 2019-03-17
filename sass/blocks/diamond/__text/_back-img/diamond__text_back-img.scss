@@ -3,7 +3,8 @@ $img: '1.jpg';
 .diamond {
   &__text {
     &_back-img {
-      @include background-image($img);
+      //@include back-img-media-all($img);
+      @include back-img($img);
       @extend %back-center;
     }
   }
