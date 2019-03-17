@@ -1,5 +1,3 @@
-@mixin background-image-media($width, $img) {
-  @media (max-width: $width) {
-    background-image: url('../img/' + $width + '/' + $img);
-  }
+@mixin back-img-media($width, $img) {
+  background-image: url('../img/' + $width + '/' + $img);
 }
