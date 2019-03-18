@@ -21,14 +21,15 @@
 + ***Изображения*** с помощью `tinify` без потери качества
 + ***html*** с помощью `pug`
 + ***css*** c помощью `sass`, также автоматически добавлены _префиксы_
-
-
+---
     sass/
         animations/ # Обработчики анимаций
         blocks/     # БЭМ
         expansions/ # Наследования SASS
         mixins/     # Миксины
         main.scss   # Основные стили
+        
+        
 Код *Production* версии находится _[здесь](https://github.com/Scofield001/scofield001.github.io/tree/master/diamond)_
 ##### Скоро будут добавлены адаптивные изображения
 
