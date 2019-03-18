@@ -475,7 +475,7 @@ body,
   user-select: none;
 }
 
-.diamond:hover ~ .bg {
+.diamond:hover + .bg {
   background: #3761c3;
 }
 
