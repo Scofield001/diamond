@@ -425,6 +425,17 @@ body,
   position: inherit;
 }
 
+.bg {
+  z-index: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin-left: 50%;
+  padding-bottom: 75%;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
 .container {
   display: -webkit-box;
   display: -webkit-flex;
@@ -444,17 +455,6 @@ body,
 .container:focus-within {
   background-color: #3761c3;
   background-image: url("../img/3.jpg");
-}
-
-.bg {
-  z-index: 0;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  margin-left: 50%;
-  padding-bottom: 75%;
-  min-width: 100vw;
-  min-height: 100vh;
 }
 
 .content {
