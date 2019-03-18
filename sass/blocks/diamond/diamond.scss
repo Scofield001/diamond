@@ -13,7 +13,7 @@ $back-color: #3761c3;
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
-  &:hover~ .bg {
+  &:hover+ .bg {
     background: $back-color;
   }
 }
