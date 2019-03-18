@@ -1,4 +1,4 @@
-const gulp = require( 'gulp' ),
+const { src, dest, parallel } = require( 'gulp' ),
     autoprefixer = require ('gulp-autoprefixer'),
     concat = require( 'gulp-concat' ),
     cssMin = require('gulp-csso'),
@@ -7,16 +7,17 @@ const gulp = require( 'gulp' ),
     tinify = require('gulp-tinify'),
     pug = require('gulp-pug'),
     gcmq = require('gulp-group-css-media-queries'),
+    htmlMin = require('gulp-htmlmin'),
     normalize = require('node-normalize-scss'),
 
     API_KEY_TINIFY = '',
 
     style = ['sass/**/*.scss'],
     views = ['views/*.pug'],
-    img = ['img/**/*'];
+    images = ['img/**/*'];
 
-gulp.task('sass', function () {
-    gulp.src( style )
+function css() {
+    return src( style )
         .pipe( concat( 'style.scss' ))
         .pipe( sass({includePaths: normalize.includePaths}))
         .pipe(autoprefixer({
@@ -24,25 +25,31 @@ gulp.task('sass', function () {
             cascade: false,
         }))
         .pipe(gcmq())
-        .pipe(gulp.dest( 'style/' ))
+        .pipe(dest( 'style/' ))
         .pipe(cssMin())
         .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('dist/style/'))
-        .pipe(gulp.dest('style/'));
+        .pipe(dest('dist/style/'))
+        .pipe(dest('style/'))
 
-});
+}
 
-gulp.task('pug', function buildHTML() {
-    gulp.src( views )
-        .pipe(pug())
-        .pipe(gulp.dest('dist/'));
-    gulp.src( views )
+function html() {
+    return src( views )
         .pipe(pug({pretty: true}))
-        .pipe(gulp.dest('./'));
-});
+        .pipe(dest('./'))
+        .pipe(htmlMin({collapseWhitespace: true}))
+        .pipe(dest('dist/'))
+        // .pipe(pug({pretty: true}))
+        // .pipe(gulp.dest('./'))
+}
 
-gulp.task('tinify', function() {
-    gulp.src(img, {nodir: true})
+function img() {
+    return src(images, {nodir: true})
         .pipe(tinify(API_KEY_TINIFY))
-        .pipe(gulp.dest('dist/img/'));
-});
+        .pipe(dest( 'dist/img/' ))
+}
+
+exports.html = html;
+exports.css = css;
+exports.img = img;
+exports.default = parallel(html, css);
