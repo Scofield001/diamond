@@ -18,14 +18,14 @@ const { src, dest, parallel } = require( 'gulp' ),
 
 function css() {
     return src( style )
-        .pipe( concat( 'style.scss' ))
+        .pipe( concat( 'style.scss'))
         .pipe( sass({includePaths: normalize.includePaths}))
         .pipe(autoprefixer({
             browsers: ['last 11 version'],
             cascade: false,
         }))
         .pipe(gcmq())
-        .pipe(dest( 'style/' ))
+        .pipe(dest('style/'))
         .pipe(cssMin())
         .pipe(rename({suffix: '.min'}))
         .pipe(dest('dist/style/'))
@@ -39,14 +39,12 @@ function html() {
         .pipe(dest('./'))
         .pipe(htmlMin({collapseWhitespace: true}))
         .pipe(dest('dist/'))
-        // .pipe(pug({pretty: true}))
-        // .pipe(gulp.dest('./'))
 }
 
 function img() {
     return src(images, {nodir: true})
         .pipe(tinify(API_KEY_TINIFY))
-        .pipe(dest( 'dist/img/' ))
+        .pipe(dest('dist/img/'))
 }
 
 exports.html = html;
