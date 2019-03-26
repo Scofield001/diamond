@@ -11,8 +11,6 @@ $back-color-focus: #3761c3;
 
   &:focus-within {
     background-color: $back-color-focus;
-    @include back-img($focus-img);
-    //@include back-img-media-all($focus-img);
     @extend %back-center;
   }
 }
