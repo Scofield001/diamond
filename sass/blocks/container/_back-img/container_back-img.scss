@@ -1,8 +1,0 @@
-$img: '2.jpg';
-.container {
-  &_back-img {
-    @include back-img($img);
-    //@include back-img-media-all($img);
-    @extend %back-center;
-  }
-}
