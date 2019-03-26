@@ -401,7 +401,6 @@ body,
 }
 
 .container:focus-within,
-.container_back-img,
 .diamond__text_back-img {
   background-position: center center;
   -webkit-background-size: cover;
@@ -454,7 +453,6 @@ body,
 
 .container:focus-within {
   background-color: #3761c3;
-  background-image: url("../img/3.jpg");
 }
 
 .content {
@@ -481,10 +479,6 @@ body,
 
 .dummy {
   margin-top: 75%;
-}
-
-.container_back-img {
-  background-image: url("../img/2.jpg");
 }
 
 .diamond__focus {
