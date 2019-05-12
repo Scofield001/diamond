@@ -10,7 +10,7 @@ const { src, dest, parallel } = require( 'gulp' ),
     htmlMin = require('gulp-htmlmin'),
     normalize = require('node-normalize-scss'),
 
-    API_KEY_TINIFY = '',
+    API_KEY_TINIFY = 'uzTyAcebFhJsMhoopeXgQBH9oU19CHH0',
 
     style = ['sass/**/*.scss'],
     views = ['views/*.pug'],
