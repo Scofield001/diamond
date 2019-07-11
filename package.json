@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Scofield001/diamond.git"
+    "url": "git+https://github.com/aabekk/diamond.git"
   },
   "keywords": [
     "Верстка"
@@ -19,9 +19,9 @@
   "author": "Aleksandr Bekk",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Scofield001/diamond/issues"
+    "url": "https://github.com/aabekk/diamond/issues"
   },
-  "homepage": "https://github.com/Scofield001/diamond#readme",
+  "homepage": "https://github.com/aabekk/diamond#readme",
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.2.0",
